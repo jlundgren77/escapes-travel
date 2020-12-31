@@ -1,0 +1,17 @@
+@mixin atSmall {
+ @media (min-width: $smBreak) {
+     @content;
+ }
+}
+
+@mixin atMedium {
+    @media (min-width: $medBreak) {
+        @content;
+    }
+}
+
+@mixin atLarge {
+    @media (min-width: $lgBreak) {
+        @content;
+    }
+}
