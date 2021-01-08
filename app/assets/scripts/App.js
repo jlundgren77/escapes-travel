@@ -1,7 +1,9 @@
 // const scss = require('../scss/index.scss');
 import '../scss/index.scss';
+import MobileMenu from './modules/MobileMenu';
 
 if (module.hot) {
   module.hot.accept();
 }
-console.log('hello');
+
+const menu = new MobileMenu();
