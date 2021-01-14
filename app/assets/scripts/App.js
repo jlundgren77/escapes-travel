@@ -1,5 +1,6 @@
 // const scss = require('../scss/index.scss');
 import '../scss/index.scss';
+import 'lazysizes';
 import MobileMenu from './modules/MobileMenu';
 import ScrollReveal from './modules/Scroll';
 import StickyHeader from './modules/StickyHeader';
