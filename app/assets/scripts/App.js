@@ -8,7 +8,25 @@ if (module.hot) {
   module.hot.accept();
 }
 
-let stickyHeader = new StickyHeader();
+new StickyHeader();
 new ScrollReveal(document.querySelectorAll('.feature-item'), 75);
 new ScrollReveal(document.querySelectorAll('.testimonial'), 60);
-const menu = new MobileMenu();
+new MobileMenu();
+
+let modal;
+
+document.querySelectorAll('.open-modal').forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (typeof modal == 'undefined') {
+      import(/* webpackChunkName: "modal" */ './modules/Modal')
+        .then((x) => {
+          modal = new x.default();
+          setTimeout(() => modal.openModal(), 20);
+        })
+        .catch(() => console.log('error loading'));
+    } else {
+      modal.openModal();
+    }
+  });
+});

@@ -1,5 +1,5 @@
 import throttle from 'lodash/throttle';
-import deboune from 'lodash/debounce';
+import debounce from 'lodash/debounce';
 class StickyHeader {
   constructor() {
     this.siteHeader = document.querySelector('.site-header');
