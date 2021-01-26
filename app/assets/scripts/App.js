@@ -8,7 +8,7 @@ import StickyHeader from './modules/StickyHeader';
 if (module.hot) {
   module.hot.accept();
 }
-
+console.log('doing some test');
 new StickyHeader();
 new ScrollReveal(document.querySelectorAll('.feature-item'), 75);
 new ScrollReveal(document.querySelectorAll('.testimonial'), 60);
